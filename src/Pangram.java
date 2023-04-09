@@ -2,6 +2,10 @@ import java.util.Arrays;
 
 public class Pangram {
     public static void main(String[] args) {
+        reverseSentence1("I am good");
+        System.out.println("Reversed sentence: " + reverseASentence("I am good"));
+        reverseString("abcdefg");
+        reverseStringWithLoop("abcdefg");
         System.out.println(reverse(675432));
         System.out.println(checkPangram("The quick brown fox jumps over the lazy dog"));
         fibonacci(9);
@@ -79,5 +83,45 @@ public class Pangram {
         Arrays.sort(sortedWord2);
 
         return Arrays.equals(sortedWord1, sortedWord2);
+    }
+    public static void reverseString(String inputString) {
+        StringBuilder stringBuilder = new StringBuilder(inputString);
+        stringBuilder = stringBuilder.reverse();
+        System.out.println("reversed string with string buffer: "+stringBuilder.toString());
+    }
+
+    public static void reverseStringWithLoop(String input){
+        char[] inputArray = input.toCharArray();
+        String reversedString = "";
+        for(int i = input.length()-1; i>=1 ;i--){
+            reversedString +=inputArray[i];
+        }
+        System.out.println("reversed string with loop: "+ reversedString);
+    }
+
+    public static String reverseASentence(String s) {
+        // Finding the index of the whitespaces
+        int x = s.indexOf(" ");
+
+        //Base condition
+        if(x == -1)
+            return s;
+
+        //Recursive call
+        return reverseASentence(s.substring(x+1)) +" "+ s.substring(0, x);
+    }
+
+    public static void reverseSentence1(String str){
+        String rev= "";
+        //Breaking the sentence into words
+        String s[] = str.split(" ");
+
+        //Adding the words stored in the array to the last
+        for(int i=0;i<s.length;i++){
+            rev = s[i]+" "+rev;
+        }
+
+        //Printing the reversed sentence
+        System.out.println("Reversed sentence: " + rev);
     }
 }
