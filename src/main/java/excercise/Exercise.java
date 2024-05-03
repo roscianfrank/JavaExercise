@@ -1,3 +1,5 @@
+package excercise;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -25,10 +27,11 @@ public class Exercise {
         Set<String> uniqueWords = new HashSet<>();
         String repeatedWord = null;
 
-        String DuplicateWord = String.valueOf(Arrays.stream(words)
+        String duplicateWord = Arrays.stream(words)
                 .filter(e -> !uniqueWords.add(e))
-                .findFirst());
-        System.out.println(DuplicateWord);
+                .findFirst().toString();
+
+        System.out.println(duplicateWord);
 
         for (String word : words) {
             if (!uniqueWords.add(word)) {

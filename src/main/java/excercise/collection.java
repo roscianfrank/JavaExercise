@@ -1,7 +1,10 @@
+package excercise;
+
 import java.util.*;
 
 public class collection {
     public static void main(String[] args) {
+        //map();
         arrays();
     }
 
@@ -17,7 +20,7 @@ public class collection {
 
     public static void arrays(){
         Integer[] array = new Integer[]{5,4,3,2,4,3,30,30,2,6,7};
-        Integer[] ints = {5,3,6,9,2,3};
+        Integer[] ints = {5,3,6,9,2,3,6};
         List<Integer> list = Arrays.stream(ints).toList();
         list.stream().sorted().distinct().forEach(System.out::print);
         System.out.println('\n');

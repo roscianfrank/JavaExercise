@@ -1,6 +1,5 @@
+package excercise;
 
-import javax.management.relation.RelationSupport;
-import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class RomanToInteger {
@@ -16,7 +15,7 @@ public class RomanToInteger {
         int result = 0;
         for (int i = romanNumeral.length() - 1; i >= 0; i--) {
             int current = romanValue(romanNumeral.charAt(i));
-            if (result <= current || current == romanValue(romanNumeral.charAt(i-1))) {
+            if (result <= current || current == romanValue(romanNumeral.charAt(i))) {
                 result += current;
             } else {
                 result -= current;

@@ -1,3 +1,5 @@
+package excercise;
+
 import java.util.Scanner;
 
 public class VowelFinder {

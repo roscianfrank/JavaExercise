@@ -1,3 +1,5 @@
+package excercise;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -6,10 +8,10 @@ import java.util.stream.Collectors;
 public class Exercise2 {
     public static void main(String[] args) {
         duplicateWordWithStream("alex brian charles alex charles david eric david");
-        isPrime(2);
+        isPrime(8);
         System.out.println(generatePrimes2(50));
         System.out.println(generatePrimes(50));
-        //System.out.println(duplicateWord("my hello world my world"));
+        System.out.println(duplicateWord("my hello world my world"));
     }
 
     public static String duplicateWord(String word){
@@ -17,7 +19,7 @@ public class Exercise2 {
             return String.valueOf(new Exception(new Throwable("String is empty")));
         }
 
-        List<String> wordList = new ArrayList<String>();
+        List<String> wordList;
         wordList = List.of(word.split(" "));
 
         Set<String> uniqueWords = new HashSet<String>();
@@ -37,11 +39,11 @@ public class Exercise2 {
     }
 
     public static void duplicateWordWithStream(String sentence){
-        List<String> wordList = Arrays.stream(sentence.split(" ")).collect(Collectors.toList());
+        List<String> wordList = Arrays.stream(sentence.split(" ")).toList();
         Set<String> tempSet = new HashSet<>();
         List<String> duplicateWords = wordList.stream()
                 .filter(w -> !tempSet.add(w))
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Duplicate words: " + duplicateWords);
         Map<String, Integer> wordMapWithCount = wordList.stream()
                 .collect(Collectors.toMap(Function.identity(), word -> 1, Math::addExact));
