@@ -1,4 +1,4 @@
-package excercise;
+package exercise;
 
 public class MorseCodeTranslator {
 

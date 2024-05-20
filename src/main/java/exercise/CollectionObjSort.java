@@ -1,8 +1,7 @@
-package excercise;
+package exercise;
 
-import java.security.PublicKey;
 import java.util.*;
-import java.util.stream.Collectors;
+
 
 public class CollectionObjSort {
     public static void main(String[] args) {
@@ -28,13 +27,13 @@ public class CollectionObjSort {
         int rollNumber;
         int marks;
         String name;
-        String lastname;
+        String lastName;
 
         public Student(int rollNumber, int marks, String name, String lastname) {
             this.rollNumber = rollNumber;
             this.marks = marks;
             this.name = name;
-            this.lastname = lastname;
+            this.lastName = lastname;
         }
 
         public String getName() {
@@ -51,7 +50,7 @@ public class CollectionObjSort {
                     "rollNumber=" + rollNumber +
                     ", marks=" + marks +
                     ", name='" + name + '\'' +
-                    ", lastname='" + lastname + '\'' +
+                    ", lastname='" + lastName + '\'' +
                     '}';
         }
     }

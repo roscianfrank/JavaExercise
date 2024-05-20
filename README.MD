@@ -1,4 +1,4 @@
 # Java exercise for interview preparation 
 
-## Learning excercise 
+## Learning exercise 
 ### collection and stream API
