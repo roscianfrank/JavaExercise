@@ -2,6 +2,7 @@ package excercise;
 
 import java.util.*;
 
+
 public class CollectionObjSort {
     public static void main(String[] args) {
         List<Student> studs = new ArrayList<>();
@@ -11,11 +12,9 @@ public class CollectionObjSort {
         studs.add(new Student(4, 90, "roscian", "frank"));
         studs.add(new Student(5, 70, "matt", "mohan"));
 
-        /*comparing the marks with logic
-        Collections.sort(studs, (s1, s2) -> {
-            return s1.marks > s2.marks ? -1 : 1;
-        });*/
-
+//        Collections.sort(studs, (s1, s2) -> {
+//            return s1.marks > s2.marks ? -1 : 1;
+//        });
         //using comparator.comparing which use getName method from student class
         //Same thing we can do it Integer for Comparator.comparingInt there is a reversed() method as well
         System.out.println("Sorted with ascending Name");
@@ -28,13 +27,13 @@ public class CollectionObjSort {
         int rollNumber;
         int marks;
         String name;
-        String lastname;
+        String lastName;
 
         public Student(int rollNumber, int marks, String name, String lastname) {
             this.rollNumber = rollNumber;
             this.marks = marks;
             this.name = name;
-            this.lastname = lastname;
+            this.lastName = lastname;
         }
 
         public String getName() {
@@ -51,7 +50,7 @@ public class CollectionObjSort {
                     "rollNumber=" + rollNumber +
                     ", marks=" + marks +
                     ", name='" + name + '\'' +
-                    ", lastname='" + lastname + '\'' +
+                    ", lastname='" + lastName + '\'' +
                     '}';
         }
     }
